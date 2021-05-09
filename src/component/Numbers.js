@@ -128,6 +128,7 @@ const Numbers=  function Numbers({fn,txt}) {
         <div className="box" style={boxx}>
            <div id="first" className="line">
                <div id="clear">clear</div>
+               <div>0</div>
                <div>/</div>
            </div>
            <div className="line">
