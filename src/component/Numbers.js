@@ -147,7 +147,7 @@ const Numbers=  function Numbers({fn,txt}) {
                 <div onClick={()=>{fn(txt+'1')}}>1</div>
                 <div onClick={()=>{fn(txt+'2')}}>2</div>
                 <div onClick={()=>{fn(txt+'3')}}>3</div>
-                <div onClick={()=>{fn(txt+'4')}}>*</div>
+                <div onClick={()=>{fn(txt+'*')}}>*</div>
            </div>
            <div className="line">
                <div onClick={()=>{fn(txt+'(')}}>(</div>

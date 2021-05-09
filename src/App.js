@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Calculate fn={fun} txt={text}/>
       <Numbers fn={fun} txt={text}/>
+      <a href="http://adarshraj.netlify.app" id="link" target="__blank" >made by adarsh</a>
     </div>
   );
 }
