@@ -1,0 +1,24 @@
+
+
+.box>div{
+    display:flex;
+}
+.box>div>div{
+    width:25%;
+    border:1px solid;
+    text-align:center;
+   align-items:center;
+    cursor:pointer;
+}
+.line{
+    height:20%;
+}
+#first{
+    justify-content:flex-end;
+}
+#clear{
+    flex-grow:3;
+}
+#equals{
+    flex-grow:2;
+}
