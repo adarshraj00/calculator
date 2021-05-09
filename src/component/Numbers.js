@@ -104,55 +104,55 @@ const Numbers=  function Numbers({fn,txt}) {
         }
         fn(''+ui[0]);
     }
-    useEffect(()=>{
-    const f=document.getElementsByClassName("line");
-    let g=[];
-    for(var i=0;i<f.length;i++){
-        const op=f[i].querySelectorAll("div");
-        for(let j=0;j<op.length;j++){
-            g.push(op[j]);
-            if(op[j].innerHTML==="clear"){
-                op[j].addEventListener("click",()=>{fn("")});
-            }
-            else if(op[j].innerHTML==="="){
-                op[j].addEventListener("click",()=>{calculate(txt)});
-            }
-            else{
-            op[j].addEventListener("click",()=>{fn(txt+op[j].innerHTML)});
-            }
-        }
-    }
-    });
+    // useEffect(()=>{
+    // const f=document.getElementsByClassName("line");
+    // let g=[];
+    // for(var i=0;i<f.length;i++){
+    //     const op=f[i].querySelectorAll("div");
+    //     for(let j=0;j<op.length;j++){
+    //         g.push(op[j]);
+    //         if(op[j].innerHTML==="clear"){
+    //             op[j].addEventListener("click",()=>{fn("")});
+    //         }
+    //         else if(op[j].innerHTML==="="){
+    //             op[j].addEventListener("click",()=>{calculate(txt)});
+    //         }
+    //         else{
+    //         op[j].addEventListener("click",()=>{fn(txt+op[j].innerHTML)});
+    //         }
+    //     }
+    // }
+    // },[]);
    
     return (
         <div className="box" style={boxx}>
            <div id="first" className="line">
-               <div id="clear">clear</div>
-               <div>0</div>
-               <div>/</div>
+               <div id="clear" onClick={()=>{fn("")}}>clear</div>
+               <div onClick={()=>{fn(txt+'0')}}>0</div>
+               <div onClick={()=>{fn(txt+'/')}}>/</div>
            </div>
            <div className="line">
-               <div>7</div>
-               <div>8</div>
-               <div>9</div>
-               <div>-</div>
+               <div onClick={()=>{fn(txt+'7')}}>7</div>
+               <div onClick={()=>{fn(txt+'8')}}>8</div>
+               <div onClick={()=>{fn(txt+'9')}}>9</div>
+               <div onClick={()=>{fn(txt+'-')}}>-</div>
            </div>
            <div className="line">
-               <div>4</div>
-               <div>5</div>
-               <div>6</div>
-               <div>+</div>
+               <div onClick={()=>{fn(txt+'4')}}>4</div>
+               <div onClick={()=>{fn(txt+'5')}}>5</div>
+               <div onClick={()=>{fn(txt+'6')}}>6</div>
+               <div onClick={()=>{fn(txt+'+')}}>+</div>
            </div>
            <div className="line">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>*</div>
+                <div onClick={()=>{fn(txt+'1')}}>1</div>
+                <div onClick={()=>{fn(txt+'2')}}>2</div>
+                <div onClick={()=>{fn(txt+'3')}}>3</div>
+                <div onClick={()=>{fn(txt+'4')}}>*</div>
            </div>
            <div className="line">
-               <div>(</div>
-               <div>)</div>
-               <div id="equals">=</div>
+               <div onClick={()=>{fn(txt+'(')}}>(</div>
+               <div onClick={()=>{fn(txt+')')}}>)</div>
+               <div id="equals" onClick={()=>{calculate(txt)}}>=</div>
            </div>
         </div>
        

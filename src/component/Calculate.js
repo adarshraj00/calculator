@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
  
 export default function Calculate({fn,txt}) {
    let css={
        height:"20%",
        border:"1px solid"
    }
+   useEffect(()=>{
+       console.log("calculator rendered");
+   })
    let input={
        width:"98%",
        height:"95%",
